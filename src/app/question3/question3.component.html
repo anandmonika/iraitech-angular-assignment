@@ -1,0 +1,23 @@
+<button mat-flat-button color="primary" class="right" (click)="goToHome()">Go to home</button>
+
+<div class="page-container center">
+
+    <h1> Add Phone Number</h1>  
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <ng-container formArrayName="ContactNos">
+        <div *ngFor="let contact of getControls(); let i=index;"> 
+            <mat-form-field>
+              <mat-label>Enter Contact Number: {{i+1}}</mat-label>
+              <input [formControlName]="i" type="number" matInput placeholder="Enter Contact Number">
+            </mat-form-field>
+            <button mat-icon-button color="warn" (click)="removeContactNo(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </ng-container>
+  </form>
+  
+  <button mat-flat-button color="primary" style="margin-right: 10px;" type="button" (click)="addContactNo()">Add New Contact</button>
+  <button mat-flat-button color="primary"  type="submit" (click)="onSubmit()">Submit Form</button>
+</div>

@@ -1,0 +1,19 @@
+<div class="page-container">
+  <button mat-flat-button color="primary" class="right" (click)="goToHome()">Go to home</button>
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Enter Index</mat-label>
+          <input [formControl]="index" type="number" matInput placeholder="Enter Index">
+        </mat-form-field>
+        <button mat-flat-button color="primary" (click)="updateNumber($event)">Submit</button>    
+      
+    </form>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <h1 class="mat-headline-1">{{msg || number}}</h1>
+    </mat-grid-tile>
+  </mat-grid-list>
+  
+</div>

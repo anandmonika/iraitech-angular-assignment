@@ -1,0 +1,34 @@
+.corner-box {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.position-top-0 {
+    top: 0
+}
+
+.position-left-0 {
+    left: 0,
+}
+
+.position-right-0 {
+    right: 0
+}
+
+.position-bottom-0 {
+    bottom: 0
+}
+
+.text-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}

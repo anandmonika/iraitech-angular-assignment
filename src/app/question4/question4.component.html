@@ -1,0 +1,16 @@
+<div class="corner-box position-top-0 position-left-0">{{textValue.value}}</div>
+<div class="corner-box position-top-0 position-right-0">{{textValue.value}}</div>
+<div class="corner-box position-bottom-0 position-left-0">{{textValue.value}}</div>
+<div class="corner-box position-bottom-0 position-right-0">{{textValue.value}}</div>  
+
+<div>
+    <form class="text-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Type Something</mat-label>
+          <input [formControl]="textValue" matInput placeholder="Type Something">
+        </mat-form-field>
+    </form>
+
+    <button mat-flat-button color="primary" class="right" (click)="goToHome()">Go to home</button>
+
+</div>
