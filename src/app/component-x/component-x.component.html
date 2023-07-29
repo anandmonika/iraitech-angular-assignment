@@ -1,0 +1,22 @@
+
+<mat-expansion-panel expanded hideToggle class="mt-10">
+<mat-expansion-panel-header>
+    <mat-panel-title>
+    {{titleValue}}
+    </mat-panel-title>
+</mat-expansion-panel-header>
+<mat-form-field class="example-full-width">
+    <mat-label>Enter Title</mat-label>
+    <input [formControl]="titleControl" matInput placeholder="Enter Title">
+  </mat-form-field>
+<button mat-flat-button color="primary" class="ml-10" (click)="updateTitle()">Update Title</button>
+<hr />
+<button mat-mini-fab color="accent" class="add-y-button" (click)="addNewYComponent()">
+    <mat-icon>add</mat-icon>
+</button>
+
+<div *ngFor="let value of valueList; let i=index;"> 
+    <app-component-y [textValue]="value" (valueUpdated)="handleValueChange($event, i)" />
+</div>
+</mat-expansion-panel>  
+

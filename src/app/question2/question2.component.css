@@ -1,0 +1,21 @@
+.page-container {
+    padding: 40px;
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1
+}
+
+#add-panel-button {
+    margin-bottom: 15px;
+}
+
+.ml-2 {
+    margin-left: 2px;
+}
+
+#result-box {
+    margin-top: 60px;
+    margin-left: 20px;
+}

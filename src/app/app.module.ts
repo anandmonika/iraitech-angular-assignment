@@ -16,6 +16,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { ComponentXComponent } from './component-x/component-x.component';
+import { ComponentYComponent } from './component-y/component-y.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import {MatIconModule} from '@angular/material/icon';
     Question4Component,
     Question1Component,
     Question2Component,
-    HomeComponent
+    HomeComponent,
+    ComponentXComponent,
+    ComponentYComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

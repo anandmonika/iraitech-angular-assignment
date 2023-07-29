@@ -1,0 +1,7 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter Something</mat-label>
+      <input [formControl]="textValueFormField" matInput placeholder="Enter Something">
+    </mat-form-field>
+    <button mat-flat-button color="primary" class="save-button" (click)="save($event)">Save</button>    
+</form>

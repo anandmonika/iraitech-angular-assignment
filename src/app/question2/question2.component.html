@@ -1,1 +1,26 @@
-<p>question2 works!</p>
+<div class="page-container">
+    <div class="flex-1">
+        <button mat-flat-button color="primary" id="add-panel-button" (click)="addNewPanel()">Add new Panel</button>
+        <mat-accordion>
+            <div *ngFor="let value of data; let i=index;"> 
+                <app-component-x [title]="value.title" [valueList]="value.valueList" (valueUpdated)="handleValueChange($event, i)" />
+            </div>
+        </mat-accordion>
+    </div>
+    <div class="flex-1" id="result-box">
+        <mat-card>
+            <mat-card-content>
+                <p class="mat-h1">Result</p>
+                <hr />
+                <ul>
+                    <li *ngFor="let value of data; let i=index;">
+                        {{ value.title }}
+                        <ul>
+                            <li *ngFor="let v of value.valueList"> {{v}} </li>
+                        </ul>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
